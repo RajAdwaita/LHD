@@ -44,11 +44,18 @@ body {
 
 .title {
     background: var(--space-cadet);
-    padding: 0.7rem 0;
+    padding: 0.7rem 0rem;
+    margin-top: auto;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .title h1 {
+    text-align: center;
+    color: #fff;
+
+}
+
+.title h4 {
     text-align: center;
     color: #fff;
 
