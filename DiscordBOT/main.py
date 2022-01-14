@@ -6,7 +6,7 @@ import pandas_datareader as pdr
 client = discord.Client()
 # load_dotenv()
 
-TOKEN = "OTMxNTI4ODQwMjU2MzExMzA3.YeFv1g.n2Qzzaf9fWVE3Lo1Py5x9rPSVs4"
+TOKEN = "OTMxNTI4ODQwMjU2MzExMzA3.YeFv1g.MtRRrCdZgq-qoRPOjTnDETH9i8Q"
 
 
 def get_stock_price(ticker):
