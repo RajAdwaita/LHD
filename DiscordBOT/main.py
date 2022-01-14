@@ -3,10 +3,13 @@ import os
 from dotenv import load_dotenv
 import pandas_datareader as pdr
 
+#  TOKEN has been removed from the code for security reasons
+# inclue your token in the .env file and run the code again
+
 client = discord.Client()
 # load_dotenv()
 
-TOKEN = "OTMxNTI4ODQwMjU2MzExMzA3.YeFv1g.MtRRrCdZgq-qoRPOjTnDETH9i8Q"
+TOKEN = ""
 
 
 def get_stock_price(ticker):
@@ -20,21 +23,22 @@ async def on_message(message):
         return
 
     if message.content.startswith("!bablu"):
-        await message.channel.send("BABLU is watching")
+        await message.channel.send("BABLU is watching!")
     if message.content == '$connect':
-        await message.author.send("Glad To Meet You Dude")
+        await message.author.send("Glad To Meet You Dude!")
 
     if message.content.startswith("!stock"):
         if(len(message.content.split()) == 2):
             # await message.channel.send("Please provide a stock ticker")
-            price = get_stock_price(message.content.split(" ")[1])
+            ticker = message.content.split(" ")[1]
+            price = get_stock_price(ticker)
+            await message.channel.send(f"The price of {ticker} is ${price}!")
 
 
 @client.event
 async def on_connect():
     print("BOT READY")
 
-    channel = client.get_channel(846143020637618207)
     # await channel.send("How is your day!")
 
 
