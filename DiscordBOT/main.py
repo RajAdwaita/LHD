@@ -9,6 +9,8 @@ import pandas_datareader as pdr
 client = discord.Client()
 # load_dotenv()
 
+# TOKEN = "OTMxNTI4ODQwMjU2MzExMzA3.YeFv1g.CWD_Gs7p0dcsaWw6X2TjkGs29j4"
+
 TOKEN = ""
 
 
