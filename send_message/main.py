@@ -23,9 +23,6 @@ def send_sms(number, message):
     return dic.get('return')
 
 
-# send_sms(8910364561, "Hello YouTuber Your account has been blocked")
-
-
 def btn_click():
     num = textNumber.get()
     msg = textMessage.get("1.0", END)
@@ -51,7 +48,8 @@ textNumber.pack(fill=X, pady=20)
 textMessage = Text(root)
 textMessage.pack(fill=X)
 
-sendBtn = Button(root, text="Send TEXT", command=btn_click, font=font,bg="green", fg="white")
+sendBtn = Button(root, text="Send TEXT", command=btn_click,
+                 font=font, bg="green", fg="white")
 
 sendBtn.pack()
 root.mainloop()
